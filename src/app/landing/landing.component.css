@@ -1,5 +1,5 @@
 .main{
-  background-image: url(/assets/download2.png);
+  background-image: url(/assets/space-3262811_1920.jpg);
   background-repeat: no-repeat;
   background-size: 100% 101%;
   background-position: center;
@@ -9,5 +9,33 @@
 h1{
   text-align: center;
   font-family: "Sofia";
-  font-size: 70px;
+  font-size: 75px;
+}
+
+#mains{
+  backdrop-filter: opacity(.4);
+  padding: 5%;
+  margin-top: 5%;
+}
+
+
+#lj{
+  font-family: 'IBM Plex Sans Condensed';
+  font-size: 35px;
+}
+
+#kk{
+  font-family: 'IBM Plex Sans Condensed';
+  font-size: 25px;
+  padding: 1%;
+  margin-top: 1%;
+  margin-left: 12%;
+  margin-right: 53%;
+  margin-bottom: 2%;
+  backdrop-filter: blur(10px);
+}
+
+body{
+  background-color: #e6f2ff
+  ;
 }
