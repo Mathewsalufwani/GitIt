@@ -41,3 +41,15 @@ body{
   background-color: #e6f2ff
   ;
 }
+
+#kv{
+  padding: 2%;
+  font-family: 'IBM Plex Sans Condensed';
+  font-size: 22px;
+  margin-bottom: 1%;
+}
+
+#hu{
+  font-family: 'Aldrich';
+  font-size: 25px;
+}
