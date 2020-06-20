@@ -21,12 +21,13 @@ export class LandingComponent implements OnInit {
       avatar_url:string;
       followers:number;
       following:number;
-      created_at:Date
+      created_at:Date;
+      public_repos:number;
     }
 
     this.http.get<ApiResponse>("https://api.github.com/users/Mathewsalufwani?Authorization: token d1b35c03b5f715d346ef08c8212b7875fa2f2c1e").subscribe(data=>{
       // Succesful API request
-      this.user = new User(data.login, data.bio, data.name, data.avatar_url, data.followers, data.following, data.created_at)
+      this.user = new User(data.login, data.bio, data.name, data.avatar_url, data.followers, data.following, data.created_at, data.public_repos)
     })
   }
 
