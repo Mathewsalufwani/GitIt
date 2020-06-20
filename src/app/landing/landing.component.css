@@ -13,9 +13,9 @@ h1{
 }
 
 #mains{
-  backdrop-filter: opacity(.4);
+  backdrop-filter: blur(10px);
   padding: 5%;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 
@@ -27,12 +27,14 @@ h1{
 #kk{
   font-family: 'IBM Plex Sans Condensed';
   font-size: 25px;
+  font-weight: bold;
   padding: 1%;
   margin-top: 1%;
   margin-left: 12%;
   margin-right: 53%;
   margin-bottom: 2%;
-  backdrop-filter: blur(10px);
+  backdrop-filter: opacity(.4);
+  
 }
 
 body{
