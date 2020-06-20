@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GitIt"
+    }
+  },
+  "defaultProject": "GitIt",
+  "cli": {
+    "analytics": "050e8c72-67fd-476b-8885-8adb69b16955"
+  }
 }
