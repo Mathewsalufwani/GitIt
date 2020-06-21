@@ -8,6 +8,8 @@ import { SearchUserComponent } from './search-user/search-user.component';
 const routes: Routes = [
   { path: 'landing', component: LandingComponent},
   { path: 'search', component: SearchUserComponent},
+  { path: '', redirectTo:"/landing", pathMatch:"full"},
+  
 ];
 
 @NgModule({

@@ -11,8 +11,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" routerLink="goals" routerLinkActive='active'>Home<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" routerLink="/about" routerLinkActive='active'>Search</a>
+        <a class="nav-item nav-link active" routerLink="landing" routerLinkActive='active'>Home<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" routerLink="/search" routerLinkActive='active'>Search</a>
       </div>
     </div>
   </nav>
@@ -22,7 +22,7 @@
       <div id="mains" class="shadow-lg">
         <p>Welcome to <b>GitIt</b>.</p>
         <p>Search for people on Github and view their public repositories</p>
-        <button type="button" class="btn btn-outline-dark btn-lg btn-block">Take me there</button>
+        <button type="button" class="btn btn-outline-dark btn-lg btn-block" routerLink="/search">Take me there</button>
       </div>
     </div>
     <div id="kk" class="rounded shadow-lg text-center ">
@@ -57,5 +57,5 @@
   <div class="text-white">.</div>
   
 </body>
-<app-search-user></app-search-user>
+
 
