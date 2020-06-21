@@ -5,19 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CompleteDatePipe implements PipeTransform {
 
-  transform(value: any): number {
-    let today:Date = new Date(); //get current date and time
-    let todayWithNoTime:any = new Date(today.getFullYear(), today.getMonth(), today.getDate())
-    var dateDifference = Math.abs(todayWithNoTime - value) //returns value in miliseconds
-    const secondsInDay = 86400; //60 seconds * 60 minutes in an hour * 24 hours in a day
-    var dateDifferenceSeconds = dateDifference*0.001; //converts miliseconds to seconds
-    var dateCounter = dateDifferenceSeconds/secondsInDay;
+  transform(value: any): any {
+    let firstDate: Date = new Date(value)
+    let firstDateWithNoTime:any  = new Date(firstDate.getFullYear(),firstDate.getMonth(),firstDate.getDate());
+    let currentDate: Date = new Date();
+    let todayWithNoTime:any = new Date(currentDate.getFullYear(),currentDate.getMonth(),currentDate.getDate())
+    let timeDifferenceSeconds = Math.round(Math.abs((todayWithNoTime - firstDateWithNoTime)/ 1000));
+    let days = Math.round(Math.abs((timeDifferenceSeconds) / 86400))
 
-    if (dateCounter >= 1 && todayWithNoTime > value){
-      return dateCounter;
-    }else{
-      return 0;
-    }
+    return days;
   }
 
 }

@@ -36,7 +36,7 @@
     <hr width="80%">
     <div class="row">
       <div class="col-md-3">
-        <img src="" class="rounded-circle img-responsive" width="240" height="250">
+        <img src="{{user.avatar_url}}" class="rounded-circle img-responsive" width="240" height="250">
       </div>
       <div class="col-md-5">
         <b>Username:</b> {{user.name}}<br>
@@ -45,11 +45,11 @@
         <b>Followers:</b> {{user.followers}}<br>
         <b>Following:</b> {{user.following}}<br>
         <b>Number of public repositories:</b> {{user.public_repos}}<br>
-        <b>Created at:</b> {{user.created_at | date}}
+        <b>Created at:</b> {{user.created_at | date}} ({{user.created_at | date | completeDate}} day(s) ago)
       </div>
       <div class="col-md-4">
         <div *ngFor="let repo of repo">
-          {{repo.full_name}}hjk
+          {{repo.full_name}}
         </div>
       </div>
     </div>

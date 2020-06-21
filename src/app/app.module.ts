@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { CompleteDatePipe } from './complete-date.pipe';
+import { OnHoverDirective } from './on-hover.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    CompleteDatePipe
+    CompleteDatePipe,
+    OnHoverDirective
   ],
   imports: [
     BrowserModule,
