@@ -1,9 +1,32 @@
-<div>
-  <b>Username:</b> <span appOnHover> {{user.name}}</span><br>
-  <b>Name:</b> <span appOnHover> {{user.login}}</span><br>
-  <b>Bio:</b>  <span appOnHover> {{user.bio}}</span><br>
-  <b>Followers:</b> <span appOnHover> {{user.followers}}</span><br>
-  <b>Following:</b> <span appOnHover> {{user.following}}</span><br>
-  <b>Number of public repositories:</b> <span appOnHover> {{user.public_repos}}</span><br>
-  <b>Created at:</b> <span appOnHover> {{user.created_at | date}} ({{user.created_at | date | completeDate}} day(s) ago)</span>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background:#0099cc ;">
+  <a class="navbar-brand"><img src="/assets/git.svg" width="30" height="30" class="d-inline-block align-top" alt=""><b> GitIt</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" routerLink="goals" routerLinkActive='active'>Search Users<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" routerLink="/about" routerLinkActive='active'>Search Repositories</a>
+    </div>
+  </div>
+</nav>
+<form class="form-inline my-2 my-lg-0" (ngSubmit)='submitGoal()' #goalForm='ngForm'>
+  <div class="form-group">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="username" name="username">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </div>
+</form>
+<div class="row">
+  <div class="col-md-3">
+    <img src="{{user.avatar_url}}" class="rounded-circle img-responsive" width="240" height="250">
+  </div>
+  <div class="col-md-5">
+    <b>Username:</b> <span appOnHover> {{user.login}}</span><br>
+    <b>Name:</b> <span appOnHover> {{user.name}}</span><br>
+    <b>Bio:</b>  <span appOnHover> {{user.bio}}</span><br>
+    <b>Followers:</b> <span appOnHover> {{user.followers}}</span><br>
+    <b>Following:</b> <span appOnHover> {{user.following}}</span><br>
+    <b>Number of public repositories:</b> <span appOnHover> {{user.public_repos}}</span><br>
+    <b>Created at:</b> <span appOnHover> {{user.created_at | date}} ({{user.created_at | date | completeDate}} day(s) ago)</span>
+  </div>
 </div>

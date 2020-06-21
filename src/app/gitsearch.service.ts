@@ -7,11 +7,16 @@ import { User } from './user';
 })
 export class GitsearchService {
 
+  private username: string;
   user: User;
 
   constructor(private http:HttpClient) {
     this.user = new User("","","","",0,0,new Date(),0);
    }
+
+  updateProfile(username:string){
+    this.username = username;
+  }
 
    userRequest(){
     interface ApiResponse{
@@ -25,7 +30,7 @@ export class GitsearchService {
       public_repos: number;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>("https://api.github.com/users/Mathewsalufwani?client_id=68aba20afd5a1fa2e4b541cefb496075806e2507").toPromise().then(response=>{
+      this.http.get<ApiResponse>("https://api.github.com/users/" + this.username +"?client_id=68aba20afd5a1fa2e4b541cefb496075806e2507").toPromise().then(response=>{
         this.user.login = response.login
         this.user.bio = response.bio
         this.user.name = response.name

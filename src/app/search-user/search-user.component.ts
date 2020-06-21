@@ -11,11 +11,16 @@ import { User } from '../user';
 export class SearchUserComponent implements OnInit {
 
   user:User;
+  username:string;
 
   constructor(private searchService:GitsearchService, private http:HttpClient) {}
-  ngOnInit() {
+  submitGoal(){
+    this.searchService.updateProfile(this.username);
     this.searchService.userRequest()
     this.user = this.searchService.user
+  }
+  ngOnInit() {
+    
   }
 
 }
