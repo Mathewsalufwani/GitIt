@@ -18,16 +18,11 @@
   </nav>
   <div class="main">
     <h1 class="text-white">GitIt</h1>
-    <div class="row">
-      <div class="col-md-1">
-
-      </div>
-      <div class="col-md-6" id="lj">
-        <div id="mains" class="shadow-lg">
-          <p>Welcome to <b>GitIt</b>.</p>
-          <p>Search for people on Github and view their public repositories</p>
-          <button type="button" class="btn btn-outline-dark btn-lg btn-block">Take me there</button>
-        </div>
+    <div id="lj">
+      <div id="mains" class="shadow-lg">
+        <p>Welcome to <b>GitIt</b>.</p>
+        <p>Search for people on Github and view their public repositories</p>
+        <button type="button" class="btn btn-outline-dark btn-lg btn-block">Take me there</button>
       </div>
     </div>
     <div id="kk" class="rounded shadow-lg text-center ">
@@ -41,16 +36,21 @@
     <hr width="80%">
     <div class="row">
       <div class="col-md-3">
-        <img src="{{user.avatar_url}}" class="rounded-circle img-responsive" width="240" height="250">
+        <img src="" class="rounded-circle img-responsive" width="240" height="250">
       </div>
-      <div class="col-md-4">
+      <div class="col-md-5">
         <b>Username:</b> {{user.name}}<br>
         <b>Name:</b> {{user.login}}<br>
         <b>Bio:</b>  {{user.bio}}<br>
         <b>Followers:</b> {{user.followers}}<br>
         <b>Following:</b> {{user.following}}<br>
-        <b>Number of public repositories:</b> {{user.public_repos}}
+        <b>Number of public repositories:</b> {{user.public_repos}}<br>
         <b>Created at:</b> {{user.created_at | date}}
+      </div>
+      <div class="col-md-4">
+        <div *ngFor="let repo of repo">
+          {{repo.full_name}}hjk
+        </div>
       </div>
     </div>
   </div>
