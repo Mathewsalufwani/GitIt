@@ -9,6 +9,7 @@ import { LandingComponent } from './landing/landing.component';
 import { CompleteDatePipe } from './complete-date.pipe';
 import { OnHoverDirective } from './on-hover.directive';
 import { SearchUserComponent } from './search-user/search-user.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchUserComponent } from './search-user/search-user.component';
     LandingComponent,
     CompleteDatePipe,
     OnHoverDirective,
-    SearchUserComponent
+    SearchUserComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
