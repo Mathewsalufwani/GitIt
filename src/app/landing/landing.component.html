@@ -39,13 +39,13 @@
         <img src="{{user.avatar_url}}" class="rounded-circle img-responsive" width="240" height="250">
       </div>
       <div class="col-md-5">
-        <b>Username:</b> {{user.name}}<br>
-        <b>Name:</b> {{user.login}}<br>
-        <b>Bio:</b>  {{user.bio}}<br>
-        <b>Followers:</b> {{user.followers}}<br>
-        <b>Following:</b> {{user.following}}<br>
-        <b>Number of public repositories:</b> {{user.public_repos}}<br>
-        <b>Created at:</b> {{user.created_at | date}} ({{user.created_at | date | completeDate}} day(s) ago)
+        <b>Username:</b> <span appOnHover> {{user.name}}</span><br>
+        <b>Name:</b> <span appOnHover> {{user.login}}</span><br>
+        <b>Bio:</b>  <span appOnHover> {{user.bio}}</span><br>
+        <b>Followers:</b> <span appOnHover> {{user.followers}}</span><br>
+        <b>Following:</b> <span appOnHover> {{user.following}}</span><br>
+        <b>Number of public repositories:</b> <span appOnHover> {{user.public_repos}}</span><br>
+        <b>Created at:</b> <span appOnHover> {{user.created_at | date}} ({{user.created_at | date | completeDate}} day(s) ago)</span>
       </div>
       <div class="col-md-4">
         <div *ngFor="let repo of repo">
