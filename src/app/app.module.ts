@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { CompleteDatePipe } from './complete-date.pipe';
 import { OnHoverDirective } from './on-hover.directive';
+import { SearchUserComponent } from './search-user/search-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     CompleteDatePipe,
-    OnHoverDirective
+    OnHoverDirective,
+    SearchUserComponent
   ],
   imports: [
     BrowserModule,
