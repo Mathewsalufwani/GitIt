@@ -31,7 +31,7 @@ export class LandingComponent implements OnInit {
       full_name:string;
     }
 
-    this.http.get<ApiResponse>(environment.apiUrl +"Marhewsalufwani?client_id=" + environment.apiKey).subscribe(data=>{
+    this.http.get<ApiResponse>(environment.apiUrl +"Mathewsalufwani?client_id=" + environment.apiKey).subscribe(data=>{
       // Succesful API request
       this.user = new User(data.login, data.bio, data.name, data.avatar_url, data.followers, data.following, data.created_at, data.public_repos)
     })

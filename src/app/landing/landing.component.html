@@ -47,15 +47,11 @@
         <b>Number of public repositories:</b> <span appOnHover> {{user.public_repos}}</span><br>
         <b>Created at:</b> <span appOnHover> {{user.created_at | date}} ({{user.created_at | date | completeDate}} day(s) ago)</span>
       </div>
-      <div class="col-md-4">
-        <div *ngFor="let repo of repo">
-          {{repo.full_name}}
-        </div>
-      </div>
+      
     </div>
   </div>
   <div class="text-white">.</div>
   
-</body>
+</body> 
 
 

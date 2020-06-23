@@ -11,9 +11,6 @@
           <a class="nav-item nav-link active" routerLink="search" routerLinkActive='active'>Search Users<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-item nav-link float-right" routerLink="/landing" routerLinkActive='active'>Search Repositories</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-item nav-link float-right" routerLink="/landing" routerLinkActive='active'>Back Home</a>
         </li>
       </ul>
@@ -21,12 +18,12 @@
   </div>
 </nav>
 <form class="form-inline my-2 my-lg-0" (ngSubmit)='submitGoal()' #goalForm='ngForm'>
-  <div class="form-group">
+  <div class="form-group" id="js">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="username" name="username">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </div>
 </form>
-<div class="row">
+<div class="row" id = "hh">
   <div class="col-md-3">
     <img src="{{user.avatar_url}}" class="rounded-circle img-responsive" width="240" height="250">
   </div>
@@ -39,8 +36,7 @@
     <b>Number of public repositories:</b> <span appOnHover> {{user.public_repos}}</span><br>
     <b>Created at:</b> <span appOnHover> {{user.created_at | date}} ({{user.created_at | date | completeDate}} day(s) ago)</span>
   </div>
+  
 </div>
-<div *ngFor="let repo of repos">
- {{repo.name}} 
-</div>
+<div class = "text-white">.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br></div>
 </div>
