@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './user';
-
+import {environment } from './../environments/environment';
 
 
 @Injectable({
@@ -34,7 +34,7 @@ export class GitsearchService {
       public_repos: number;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>("https://api.github.com/users/" + this.username +"?client_id=68aba20afd5a1fa2e4b541cefb496075806e2507").toPromise().then(response=>{
+      this.http.get<ApiResponse>(environment.apiUrl + this.username +"?client_id=" + environment.apiKey).toPromise().then(response=>{
         this.user.login = response.login
         this.user.bio = response.bio
         this.user.name = response.name
