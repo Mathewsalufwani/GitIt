@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './user';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,16 +11,18 @@ export class GitsearchService {
 
   private username: string;
   user: User;
+  
 
   constructor(private http:HttpClient) {
     this.user = new User("","","","",0,0,new Date(),0);
+    
    }
 
   updateProfile(username:string){
     this.username = username;
   }
 
-   userRequest(){
+  userRequest(){
     interface ApiResponse{
       login: string; 
       bio: string;
@@ -57,5 +61,7 @@ export class GitsearchService {
     })
     return promise
   }
+
+  
 
 }

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { GitsearchService } from './gitsearch.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +29,7 @@ import { SearchRepoComponent } from './search-repo/search-repo.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [GitsearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

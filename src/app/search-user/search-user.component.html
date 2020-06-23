@@ -40,4 +40,7 @@
     <b>Created at:</b> <span appOnHover> {{user.created_at | date}} ({{user.created_at | date | completeDate}} day(s) ago)</span>
   </div>
 </div>
+<div *ngFor="let repo of repos">
+ {{repo.name}} 
+</div>
 </div>

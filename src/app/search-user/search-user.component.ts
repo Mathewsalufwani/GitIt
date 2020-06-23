@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GitsearchService } from '../gitsearch.service';
 import { User } from '../user';
+import { Repo } from '../repo';
 
 @Component({
   selector: 'app-search-user',
@@ -11,6 +12,7 @@ import { User } from '../user';
 export class SearchUserComponent implements OnInit {
 
   user:User;
+  repos:Repo;
   username:string;
 
   constructor(private searchService:GitsearchService, private http:HttpClient) {}

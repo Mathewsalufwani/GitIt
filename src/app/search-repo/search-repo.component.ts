@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Repo } from '../repo';
+
 
 @Component({
   selector: 'app-search-repo',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchRepoComponent implements OnInit {
 
-  constructor() { }
+  repo: Repo;
+  username:string;
 
-  ngOnInit(): void {
+  
+  ngOnInit(){
   }
 
 }
