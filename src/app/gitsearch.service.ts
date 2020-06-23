@@ -34,7 +34,7 @@ export class GitsearchService {
       public_repos: number;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>(environment.apiUrl + this.username +"?client_id=" + environment.apiKey).toPromise().then(response=>{
+      this.http.get<ApiResponse>(`${environment.apiUrl}${this.username}?client_id=${environment.apiKey}`).toPromise().then(response=>{
         this.user.login = response.login
         this.user.bio = response.bio
         this.user.name = response.name
