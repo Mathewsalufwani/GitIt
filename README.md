@@ -16,11 +16,11 @@ When the user lands on the home page, he or she sees an example of information o
 None so far, be sure to notify me if any arise
 
 ## Technologies Used
-This project was generated with Angular CLI version 9.1.3.
-HTML
-CSS
-JavaScript
-Typescript
+* This project was generated with Angular CLI version 9.1.3.
+* HTML
+* CSS
+* JavaScript
+* Typescript
 
 ## Link to live page
 [Access the website with this link](https://Mathewsalufwani.github.io/GitIt/)
